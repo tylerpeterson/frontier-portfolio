@@ -1,6 +1,6 @@
 var myModule = angular.module('Angello', []);
 
-myModule.controller('MainCtrl', function($scope) {
+myModule.controller('MainCtrl', ['$scope', function($scope) {
   $scope.currentStory;
 
   $scope.setCurrentStory = function (story) {
@@ -30,4 +30,4 @@ myModule.controller('MainCtrl', function($scope) {
   ];
 
   $scope.setCurrentStory($scope.stories[0]);
-});
+}]);
